@@ -3,7 +3,7 @@
 Invert a binary tree.
 
 Example:
-
+```
 Input:
 
      4
@@ -18,6 +18,7 @@ Output:
   7     2
  / \   / \
 9   6 3   1
+```
 
 ```python
     def invertTree(self, root: TreeNode) -> TreeNode:
