@@ -58,6 +58,6 @@ def letterCombinations(self, digits: str) -> List[str]:
 
 
 ```
-Runtime: 32 ms, faster than 51.40% of Python3 online submissions for Letter Combinations of a Phone Number.
+Runtime: 28 ms, faster than 79.22% of Python3 online submissions for Letter Combinations of a Phone Number.
 Memory Usage: 14.3 MB, less than 100.00% of Python3 online submissions for Letter Combinations of a Phone Number.
 ```
