@@ -31,26 +31,21 @@ Constraints:
 
 ```python
 def combine(self, n: int, k: int) -> List[List[int]]:
-        def gen_pattern(nums, k):
-            if k == 0:
-                return [[]]
-            if k == 1:
-                return [[num] for num in nums]
+        result = []
+        def gen_pattern(build, index):
+            if len(build) ==k:
+                result.append(build)
+                return
             
-            res = []
-            for i in range(len(nums)):
-                perms = gen_pattern(nums[i+1:], k-1)
-                for p in perms:
-                    res.append([nums[i]] + p)        
-            return res
-        
-        nums = list(range(1, n+1))
-        res = gen_pattern(nums, k)
-        return res
+            for i in range(index+1, n+1):
+                gen_pattern(build+[i], i)
+                
+        gen_pattern([], 0)
+        return result
 ```
 
 
 ```
-Runtime: 556 ms, faster than 37.57% of Python3 online submissions for Combinations.
-Memory Usage: 16.2 MB, less than 33.85% of Python3 online submissions for Combinations.
+Runtime: 544 ms, faster than 43.06% of Python3 online submissions for Combinations.
+Memory Usage: 15.6 MB, less than 33.85% of Python3 online submissions for Combinations.
 ```
